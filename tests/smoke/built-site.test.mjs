@@ -10,6 +10,8 @@ test('production homepage contains the expected portfolio chapters', () => {
     assert.match(home, new RegExp(`\\bid="${id}"`), `expected #${id} section`);
   }
   assert.doesNotMatch(home, /\bid="now"|>Now</i);
+  assert.match(home, /SAW LUKE LOO \(LUKE\) WAH/);
+  assert.match(home, /aria-label="Saw Luke Loo \(Luke\) Wah, home"/);
 });
 
 test('local hash links resolve to an element on the homepage', () => {
