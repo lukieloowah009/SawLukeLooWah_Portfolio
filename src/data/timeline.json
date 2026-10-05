@@ -1,0 +1,65 @@
+[
+  {
+    "id": "yangon-birth",
+    "order": 0,
+    "period": "1998",
+    "title": "Yangon, Myanmar",
+    "summary": "Born in Yangon, where the story starts.",
+    "tag": "ORIGIN",
+    "detail": "I was born in Yangon, Myanmar, in 1998."
+  },
+  {
+    "id": "uwc-red-cross-nordic",
+    "order": 1,
+    "period": "2015–2017",
+    "title": "United World College Red Cross Nordic · Flekke, Norway",
+    "summary": "Left Myanmar at barely 17 for high school and the IB programme in a community spanning 100+ countries.",
+    "tag": "WIDER WORLD",
+    "detail": "For two years I studied the IB programme at UWC Red Cross Nordic. Roommates and friends from Lebanon, Nepal, Ghana, Malaysia, Norway, Portugal, Ethiopia, and many other places became friends for life. Living and learning together widened my view of the world: beyond countries and backgrounds, I saw how much humanity we share."
+  },
+  {
+    "id": "move-to-united-states",
+    "order": 2,
+    "period": "2017",
+    "title": "A new start in the United States",
+    "summary": "Moved to the U.S. on a full scholarship, carrying a single suitcase.",
+    "tag": "NEXT CHAPTER",
+    "detail": "After Norway, I moved to the United States on a full scholarship. I arrived with one suitcase and began the next chapter of my education and life."
+  },
+  {
+    "id": "university-of-florida",
+    "order": 3,
+    "period": "2017–2021",
+    "title": "Gainesville, Florida",
+    "summary": "B.S. in Computer Science, University of Florida.",
+    "tag": "FOUNDATIONS",
+    "detail": "Started August 2017 and completed the degree in May 2021."
+  },
+  {
+    "id": "nexlabs-internship",
+    "order": 4,
+    "period": "2019",
+    "title": "Nexlabs · Yangon, Myanmar",
+    "summary": "Software engineering intern; PHP Laravel APIs and Google Cloud Vision integration.",
+    "tag": "FIRST BUILD",
+    "detail": "Worked on a budgeting tool and an Ingredient2Recipe chatbot, including image label recognition with Google Cloud Vision."
+  },
+  {
+    "id": "citrix-internship",
+    "order": 5,
+    "period": "2020",
+    "title": "Citrix · Fort Lauderdale",
+    "summary": "Built an Azure-integrated .NET Core maintenance bot used for data updates across 4,000+ customers.",
+    "tag": "AUTOMATION",
+    "detail": "The integration used Azure Time Trigger Functions, Service Bus, Queues, and Key Vault."
+  },
+  {
+    "id": "citrix-platform-engineering",
+    "order": 6,
+    "period": "2021–NOW",
+    "title": "Cloud platform engineering",
+    "summary": "Joined Citrix as a Software Engineer; promoted to Senior Software Engineer. Focused on provisioning, control planes, and reliable multi-tenant systems.",
+    "tag": "IN PROGRESS",
+    "detail": "Additional chapters include disaster recovery drills and multi-region expansion, including Western Europe and regulated environments."
+  }
+]
