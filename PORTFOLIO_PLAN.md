@@ -28,7 +28,7 @@ Create a fast, responsive, accessible personal portfolio that feels like an inte
 - Timeline now includes: born in Yangon in 1998; UWC Red Cross Nordic in Flekke, Norway (2015–2017), IB programme, an international community of 100+ countries and lifelong friendships; moved to the U.S. on a full scholarship with one suitcase in 2017; UF, internships, and cloud career. The Norway story emphasizes shared humanity and a wider worldview.
 - Think themes: AI agents; balancing AI speed with avoiding AI slop and maintaining good engineering; system design and architecture.
 - Life topics: cooking cuisines around the world and being a foodie; exploring small towns and cafés; video games and manga; occasional golf (still learning); time with family and friends. Keep Life copy personal and free of technical metaphors.
-- Build story is published on the homepage, based on the resume and Luke's clarification. It covers multi-tenant provisioning/lifecycle workflows for tens of thousands of tenants; control-plane expansion to GCP and Azure West Europe; disaster recovery; RBAC/deployment challenges; and documented impact. Do not add internal topology, unsupported technical specifics, or invented retrospective claims.
+- Luke asked to remove the detailed Build Field Story because he does not want that level of project detail published. It has been removed from the homepage and source content. Keep public Build material at the existing high-level overview unless Luke approves specific copy.
 - Remaining in this step: Luke reviews the latest page/story and supplies any corrections. Think/Life articles can be added later and are not launch blockers.
 
 ### 3. Deployment — complete
@@ -36,7 +36,7 @@ Create a fast, responsive, accessible personal portfolio that feels like an inte
 - Repository remote is `git@github.com:lukieloowah009/SawLukeLooWah_Portfolio.git`; deploy from `main` to `https://lukieloowah009.github.io/SawLukeLooWah_Portfolio/`.
 - Astro is configured with the GitHub Pages site URL and project `base`; favicon, 404 return links, and compiled assets use the project path.
 - Added `.github/workflows/deploy.yml` to run `pnpm check` and `pnpm test`, then publish the static `dist/` output on pushes to `main` (and manual dispatch).
-- Local validation passes: Astro check (0 diagnostics), 3 unit tests, 5 production smoke tests. Build has two non-fatal Rollup annotation warnings in the installed Zod dependency.
+- Local validation after removing the detailed Build story: Astro check (0 diagnostics), 1 unit test, 6 production smoke tests. Build has two non-fatal Rollup annotation warnings in the installed Zod dependency.
 - GitHub Pages was enabled by Luke; deployment commit `3aaff26` was pushed to `main`.
 - GitHub Actions run [37256104244](https://github.com/lukieloowah009/SawLukeLooWah_Portfolio/actions/runs/37256104244) completed successfully. The live site returned HTTP 200 at [https://lukieloowah009.github.io/SawLukeLooWah_Portfolio/](https://lukieloowah009.github.io/SawLukeLooWah_Portfolio/).
 - No custom domain is configured; it can be added later.
@@ -44,10 +44,8 @@ Create a fast, responsive, accessible personal portfolio that feels like an inte
 ## Resume-backed facts and constraints
 
 - Senior Software Engineer at Citrix since June 2021, promoted from Software Engineer; Computer Science B.S. at the University of Florida (2017–2021); internships at Nexlabs and Citrix.
-- Resume reports ownership of cloud provisioning/control-plane services for tens of thousands of tenants in Azure-heavy multi-cloud environments; lifecycle workflows for upgrades, migrations, rollbacks, and reprovisioning; disaster-recovery drills; co-led expansion to Western Europe; major latency reductions, elimination of recurring outages, and `$5M+` annual cloud savings.
-- Luke clarified that control-plane expansion also included GCP, and specifically Azure West Europe.
-- Use only information from the resume or explicit user corrections for the public Build story. Avoid exposing specific architecture details that were not provided.
+- Resume supports the public high-level facts already shown: Senior Software Engineer at Citrix, cloud platform engineering, tens of thousands of tenants, and `$5M+` annual savings. Keep additional resume detail private unless Luke approves it for publication.
 
 ## Session handoff
 
-Steps 1–3 are complete for the first release. The live GitHub Pages site is https://lukieloowah009.github.io/SawLukeLooWah_Portfolio/. Continue future content updates in `/Users/sawlukeloowah/Documents/Portfolio`; pushes to `main` run checks/tests and deploy automatically. No custom domain is configured.
+Steps 1–3 are complete for the first release. The live GitHub Pages site is https://lukieloowah009.github.io/SawLukeLooWah_Portfolio/. Luke requested removal of the detailed Field Story; it is removed from the current source and a redeploy is pending. The previous public commit history still contains the earlier version; history has not been rewritten. Continue future content updates in `/Users/sawlukeloowah/Documents/Portfolio`; pushes to `main` run checks/tests and deploy automatically. No custom domain is configured.

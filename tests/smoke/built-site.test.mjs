@@ -19,16 +19,20 @@ test('local hash links resolve to an element on the homepage', () => {
   for (const href of hrefs) assert.ok(ids.has(href), `#${href} has no target`);
 });
 
-test('homepage includes the key story and journey details', () => {
+test('homepage includes the high-level Build summary and journey details', () => {
   for (const phrase of [
     'I build systems.',
-    'A control plane for tens of thousands of tenants',
-    '$5M+ USD',
-    'GCP',
-    'West Europe',
+    'Tens of thousands',
+    'Multi-cloud',
     'Flekke, Norway',
   ]) {
     assert.ok(home.includes(phrase), `expected homepage to include: ${phrase}`);
+  }
+});
+
+test('detailed Field Story is absent from the public homepage', () => {
+  for (const phrase of ['FIELD STORY / 01', 'THE CHALLENGE', 'THE CONSTRAINTS', 'THE SYSTEM', 'THE IMPACT', 'A control plane for tens of thousands of tenants']) {
+    assert.ok(!home.includes(phrase), `unexpected public story content: ${phrase}`);
   }
 });
 
