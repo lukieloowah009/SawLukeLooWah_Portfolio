@@ -40,10 +40,10 @@ test('detailed Field Story is absent from the public homepage', () => {
 
 test('production 404 page offers a clear route back home', () => {
   assert.match(notFound, /doesn’t resolve/i);
-  assert.match(notFound, /href="\/SawLukeLooWah_Portfolio\/"[^>]*>Return to the archive/i);
+  assert.match(notFound, /href="\/"[^>]*>Return to the archive/i);
 });
 
-test('production assets and section links use the GitHub Pages project path', () => {
-  assert.match(home, /href="\/SawLukeLooWah_Portfolio\/_astro\//);
-  assert.match(home, /href="\/SawLukeLooWah_Portfolio\/favicon\.svg"/);
+test('production assets use the custom-domain root path', () => {
+  assert.match(home, /href="\/_astro\//);
+  assert.match(home, /href="\/favicon\.svg"/);
 });
