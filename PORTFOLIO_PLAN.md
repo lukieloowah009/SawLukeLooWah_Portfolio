@@ -10,7 +10,7 @@ Create a fast, responsive, accessible personal portfolio that feels like an inte
 - Astro components and semantic HTML for the default experience; add client-side JavaScript only for interactions that benefit from it.
 - CSS custom properties and component styles for the visual system; no utility CSS dependency initially.
 - Markdown and typed Astro content collections for project stories, career milestones, and writing.
-- Deploy as a static site on **Vercel** (recommended) or Cloudflare (alternative; select during step 3).
+- Deploy as a static site on **GitHub Pages** via GitHub Actions (free plan).
 
 ## Three steps
 
@@ -18,6 +18,7 @@ Create a fast, responsive, accessible personal portfolio that feels like an inte
 
 - Responsive Astro homepage, shared layout, design tokens, chapter navigation, engineering diagram, interactive timeline, and Think/Life previews are implemented.
 - Current sections: Home, Build, Journey, Think, and Life. Luke asked to remove Now, so no Now section or placeholders remain.
+- Luke prefers the site at approximately 125% browser zoom by default. CSS pixel-based type/spacing and responsive breakpoints are scaled together to keep the same responsive behavior.
 - Added an SVG favicon and custom 404 page. Astro check and static build have succeeded; repeat checks after further changes.
 
 ### 2. Content updates — in progress
@@ -30,11 +31,14 @@ Create a fast, responsive, accessible personal portfolio that feels like an inte
 - Build story is published on the homepage, based on the resume and Luke's clarification. It covers multi-tenant provisioning/lifecycle workflows for tens of thousands of tenants; control-plane expansion to GCP and Azure West Europe; disaster recovery; RBAC/deployment challenges; and documented impact. Do not add internal topology, unsupported technical specifics, or invented retrospective claims.
 - Remaining in this step: Luke reviews the latest page/story and supplies any corrections. Think/Life articles can be added later and are not launch blockers.
 
-### 3. Deployment — later
+### 3. Deployment — setup ready; GitHub Pages setting is the next action
 
-- Recommendation: **Vercel** for static Astro with Git-based previews and no extra adapter configuration. Cloudflare is an alternative.
-- No Git remote is configured. Choose/confirm repository destination and visibility, hosting account, and custom domain or provider subdomain before publishing.
-- Verify production build, responsive behavior, keyboard accessibility, reduced-motion behavior, metadata/social preview, and deployed experience. Record live URL here.
+- Repository remote is `git@github.com:lukieloowah009/SawLukeLooWah_Portfolio.git`; deploy from `main` to `https://lukieloowah009.github.io/SawLukeLooWah_Portfolio/`.
+- Astro is configured with the GitHub Pages site URL and project `base`; favicon, 404 return links, and compiled assets use the project path.
+- Added `.github/workflows/deploy.yml` to run `pnpm check` and `pnpm test`, then publish the static `dist/` output on pushes to `main` (and manual dispatch).
+- Local validation passes: Astro check (0 diagnostics), 3 unit tests, 5 production smoke tests. Build has two non-fatal Rollup annotation warnings in the installed Zod dependency.
+- **Next:** Luke enables GitHub Pages in repository Settings → Pages → Build and deployment → Source: GitHub Actions. Then push the current changes to `main`, watch the Actions workflow, and verify the live URL. No custom domain is configured; it can be added later.
+- After deployment, verify the live page and record the final URL here.
 
 ## Resume-backed facts and constraints
 
@@ -45,4 +49,4 @@ Create a fast, responsive, accessible personal portfolio that feels like an inte
 
 ## Session handoff
 
-Continue with step 2 in `/Users/sawlukeloowah/Documents/Portfolio`. The latest request updated Build to a resume-based public story and removed Now entirely; these changes are in the source and this plan. Next, ensure the browser preview reflects the current source, invite Luke's copy corrections, then proceed to step 3 after review. Step 3 still needs a Git remote/repository destination, hosting account selection (Vercel recommended; Cloudflare alternative), and domain/subdomain choice. Complete final responsive/accessibility review, deploy, and record the live URL here.
+Continue with step 3 in `/Users/sawlukeloowah/Documents/Portfolio`. GitHub Pages configuration and the deploy workflow are prepared locally. Ask Luke to enable Pages at Settings → Pages → Build and deployment → Source: GitHub Actions. Once enabled, push current changes to `main`, watch the workflow, confirm the live URL, and update this plan. The repository currently has no custom domain.
