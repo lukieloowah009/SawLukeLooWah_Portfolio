@@ -31,14 +31,15 @@ Create a fast, responsive, accessible personal portfolio that feels like an inte
 - Build story is published on the homepage, based on the resume and Luke's clarification. It covers multi-tenant provisioning/lifecycle workflows for tens of thousands of tenants; control-plane expansion to GCP and Azure West Europe; disaster recovery; RBAC/deployment challenges; and documented impact. Do not add internal topology, unsupported technical specifics, or invented retrospective claims.
 - Remaining in this step: Luke reviews the latest page/story and supplies any corrections. Think/Life articles can be added later and are not launch blockers.
 
-### 3. Deployment — setup ready; GitHub Pages setting is the next action
+### 3. Deployment — complete
 
 - Repository remote is `git@github.com:lukieloowah009/SawLukeLooWah_Portfolio.git`; deploy from `main` to `https://lukieloowah009.github.io/SawLukeLooWah_Portfolio/`.
 - Astro is configured with the GitHub Pages site URL and project `base`; favicon, 404 return links, and compiled assets use the project path.
 - Added `.github/workflows/deploy.yml` to run `pnpm check` and `pnpm test`, then publish the static `dist/` output on pushes to `main` (and manual dispatch).
 - Local validation passes: Astro check (0 diagnostics), 3 unit tests, 5 production smoke tests. Build has two non-fatal Rollup annotation warnings in the installed Zod dependency.
-- **Next:** Luke enables GitHub Pages in repository Settings → Pages → Build and deployment → Source: GitHub Actions. Then push the current changes to `main`, watch the Actions workflow, and verify the live URL. No custom domain is configured; it can be added later.
-- After deployment, verify the live page and record the final URL here.
+- GitHub Pages was enabled by Luke; deployment commit `3aaff26` was pushed to `main`.
+- GitHub Actions run [37256104244](https://github.com/lukieloowah009/SawLukeLooWah_Portfolio/actions/runs/37256104244) completed successfully. The live site returned HTTP 200 at [https://lukieloowah009.github.io/SawLukeLooWah_Portfolio/](https://lukieloowah009.github.io/SawLukeLooWah_Portfolio/).
+- No custom domain is configured; it can be added later.
 
 ## Resume-backed facts and constraints
 
@@ -49,4 +50,4 @@ Create a fast, responsive, accessible personal portfolio that feels like an inte
 
 ## Session handoff
 
-Continue with step 3 in `/Users/sawlukeloowah/Documents/Portfolio`. GitHub Pages configuration and the deploy workflow are prepared locally. Ask Luke to enable Pages at Settings → Pages → Build and deployment → Source: GitHub Actions. Once enabled, push current changes to `main`, watch the workflow, confirm the live URL, and update this plan. The repository currently has no custom domain.
+Steps 1–3 are complete for the first release. The live GitHub Pages site is https://lukieloowah009.github.io/SawLukeLooWah_Portfolio/. Continue future content updates in `/Users/sawlukeloowah/Documents/Portfolio`; pushes to `main` run checks/tests and deploy automatically. No custom domain is configured.
